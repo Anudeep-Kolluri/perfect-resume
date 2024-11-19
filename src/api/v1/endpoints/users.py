@@ -9,10 +9,12 @@ from jose import JWTError
 router = APIRouter()
 
 @router.post("/register")
-def user_registration(user: UserForm, db: Session = Depends(get_db)):
-    new_user = get_user_by_email(db, email=user.email)
+def user_registration(user: UserForm, db: Session = Depends(get_db)): # yes (api_key) 
+    '''
+        new_user = get_user_by_email(db, email=user.email)
     if new_user:
         raise HTTPException(status_code=400, detail="Email already exists")
+    '''
     return create_user(db, user)
 
 @router.get("/me")

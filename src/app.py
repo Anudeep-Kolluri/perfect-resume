@@ -11,13 +11,10 @@ import uvicorn
 
 origins = ["*"]
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    init_db()
-    yield
 
+init_db()
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,

@@ -7,6 +7,7 @@ class UserForm(BaseModel):
     user_name: str
     email: EmailStr
     password: str
+    api_key: str
 
 class UserInDB(UserBase):
     user_name: str
