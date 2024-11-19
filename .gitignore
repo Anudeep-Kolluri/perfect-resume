@@ -1,0 +1,7 @@
+venv/
+src/__pycache__
+src/api/__pycache__
+src/api/v1/endpoints/__pycache__
+src/crud/__pycache__
+src/db/__pycache__
+.env
